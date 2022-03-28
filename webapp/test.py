@@ -1,12 +1,12 @@
 import serial
 import time
 
-uno2 = serial.Serial("COM10", baudrate=9600)
-time.sleep(3)
+uno2 = serial.Serial("COM6", baudrate=9600)
+time.sleep(5)
 
-# for i in range(2):
-uno2.write(b'H')
-    # print(i)
+for i in range(2):
+    uno2.write(b'H')
+    print(i)
 
 print("Turning Motor 1 of Uno2")
 

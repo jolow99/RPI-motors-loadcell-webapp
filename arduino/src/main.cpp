@@ -27,11 +27,7 @@ void loop() {
 
     // read the oldest byte in the serial buffer:
     incomingByte = Serial.read();
-
-    // if it's a capital H (ASCII 72), turn on the LED:
-    if (incomingByte == 1) {
-      motor1.step(100, FORWARD, SINGLE);
-    }
+    Serial.println(incomingByte);    
 
     // if it's a capital H (ASCII 72), turn on the LED:
     if (incomingByte == 'H') {
@@ -40,11 +36,6 @@ void loop() {
 
     // if it's an L (ASCII 76) turn off the LED:
     if (incomingByte == 'J') {
-      motor2.step(100, FORWARD, SINGLE);
-    }
-
-    // if it's an L (ASCII 76) turn off the LED:
-    if (incomingByte == 2) {
       motor2.step(100, FORWARD, SINGLE);
     }
 
